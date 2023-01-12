@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'ecommerce:product_list' %}">Product List</a>
+            <a href="{% url 'ecommerce:product_add' %}">Add Product</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        Copyright © {{ year }} BlessedTouch
+    </footer>
+</body>
+</html>
